@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6914A414287C08F90002C6FD /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6914A413287C08F90002C6FD /* start.txt */; };
 		69DFA2DA287AAD18002A4D94 /* WordScrambleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DFA2D9287AAD18002A4D94 /* WordScrambleApp.swift */; };
 		69DFA2DC287AAD18002A4D94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DFA2DB287AAD18002A4D94 /* ContentView.swift */; };
 		69DFA2DE287AAD1B002A4D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69DFA2DD287AAD1B002A4D94 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6914A413287C08F90002C6FD /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 		69DFA2D6287AAD18002A4D94 /* WordScramble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordScramble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69DFA2D9287AAD18002A4D94 /* WordScrambleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambleApp.swift; sourceTree = "<group>"; };
 		69DFA2DB287AAD18002A4D94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 		69DFA2DF287AAD1B002A4D94 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				6914A413287C08F90002C6FD /* start.txt */,
 				69DFA2E0287AAD1B002A4D94 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69DFA2E1287AAD1B002A4D94 /* Preview Assets.xcassets in Resources */,
+				6914A414287C08F90002C6FD /* start.txt in Resources */,
 				69DFA2DE287AAD1B002A4D94 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
