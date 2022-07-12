@@ -39,6 +39,9 @@ struct ContentView: View {
             } message: {
                 Text(errorMessage)
             }
+            .toolbar {
+                Button("Restart Game", action: startGame)
+            }
         }
     }
     func addNewWord() {
@@ -60,6 +63,16 @@ struct ContentView: View {
 
         guard isReal(word: answer) else {
             wordError(title: "Word not recognized", message: "You can't just make them up, you know!")
+            return
+        }
+        
+        guard isNotShort(word: answer) else {
+            wordError(title: "Word too short", message: "That word is a little too short!")
+            return
+        }
+        
+        guard isNotStartWord(word: answer) else {
+            wordError(title: "Word is copied", message: "You can't use a word we gave you!")
             return
         }
 
@@ -113,6 +126,22 @@ struct ContentView: View {
         let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
 
         return misspelledRange.location == NSNotFound
+    }
+    
+    func isNotShort(word: String) -> Bool {
+        if word.count < 4 {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    func isNotStartWord(word: String) -> Bool {
+        if word == rootWord {
+            return false
+        } else {
+            return true
+        }
     }
     
     func wordError(title: String, message: String) {
