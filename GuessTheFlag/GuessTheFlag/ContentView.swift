@@ -31,6 +31,7 @@ struct ContentView: View {
     @State private var questions = 0
     @State private var flagTapped = 1
     
+    @State private var animationAmount = 0.0
     var body: some View {
         ZStack {
             RadialGradient(stops: [
@@ -58,9 +59,14 @@ struct ContentView: View {
                     ForEach(0..<3) { number in
                         Button {
                            flagTapped(number)
+                            
+                            withAnimation() {
+                                animationAmount += 360
+                            }
                         } label: {
                             flagImage(country: countries[number])
                         }
+                        .rotation3DEffect(.degrees(animationAmount), axis: (x: 0, y: 1, z: 0))
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -104,8 +110,8 @@ struct ContentView: View {
             scoreTitle = "Wrong, you picked \(countries[number])"
             score -= 1
         }
-
         showingScore = true
+    
     }
     
     func askQuestion() {
